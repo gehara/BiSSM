@@ -29,8 +29,10 @@ IBD: migrations (Nm) are scaled by geographic distance and dispersal rate per ge
 Island: migrations (Nm) are sampled from a uniform prior; dispersal = Nm/distance.
 
 The two necessary inputs are North.txt and N_pop_assignment.txt (exemples included)
-It is also necessary to specify other parameters, more information inside BiSSM_script.R
-The file N_observed_3371_loci.txt is the observed number of segsites, Pi, and pairwise Fst 
+
+It is also necessary to specify other parameters (more information inside BiSSM_script.R)
+
+The file N_observed_3371_loci.txt is the observed number of segsites, Pi, and pairwise Fst. 
 
 The script is just an example and will run only 100 simulations per model plus 10 simulations as testing data. It also runs a neural network for only 10 epochs, so results are meaningless. To have meaningful results you should change the script and run at least 1,000 simulations and train the neural network for at least 1000 epochs.   
 
