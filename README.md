@@ -20,12 +20,13 @@ The main script showing an example is BiSSM_script.R
 
 To try it out clone the repository to your computer and *source* BiSSM_script.R in your R console or open it in Rstudio and run.
 
-This example will run 10 simulations for two models: IBD and Island
+This example will run 100 simulations for two models: IBD and Island
 
-The example dataset that this is based on comes from 7 samples of the species *Piculus aurulentus* from the Atlantic Forest, Brazil.
+The example dataset that this is based on 7 samples of the species *Piculus aurulentus* from the Atlantic Forest, Brazil.
 
-IBD: In this model migrations are scaled by geographic distance and dispersal rate per generations.
-Island: In this model migrations are sampled from a prior.
+IBD: migrations (Nm) are scaled by geographic distance and dispersal rate per generations, which is sampled from a uniform prior.
+
+Island: migrations (Nm) are sampled from a uniform prior; dispersal = Nm/distance.
 
 The two necessary inputs are North.txt and N_pop_assignment.txt (exemples included)
 It is also necessary to specify other parameters, more information inside BiSSM_script.R
