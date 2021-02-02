@@ -4,11 +4,16 @@ R code to simulate a Bidimentional Stepping Stone model and calculate the number
 ## Dependencies
  To run this code you need to have the following packages installed.
  > install.packages("devtools")
+ 
  > devtools::install_github("gehara/PipeMaster")" 
+ 
  > install.packages("reshape")
+ 
  > install.packages("geosphere")
+ 
  > install.packages("keras") 
- Keras can be tricky to install. See the keras webpage (https://keras.rstudio.com/) for additional information on how to install the package.
+ 
+ *Keras can be tricky to install. See the keras webpage (https://keras.rstudio.com/) for additional information on how to install the package.*
  
 
 The main script showing an example is BiSSM_script.R
