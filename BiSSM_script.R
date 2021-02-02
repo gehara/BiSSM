@@ -121,12 +121,12 @@ pdf("PCA.pdf")
 
   plot(gfit(target = obs, 
           sumstat = Island[,colnames(Island)%in% colnames(obs)],
-          nb.replicate = 5),
+          nb.replicate = 50),
           main = "Island", breaks = 20)
 
   plot(gfit(target = obs, 
           sumstat = IBD[,colnames(IBD)%in% colnames(obs)],
-          nb.replicate = 5),
+          nb.replicate = 50),
      main = "IBD", breaks = 20)
 dev.off()
 
@@ -198,7 +198,7 @@ epochs <- 10 ## how long do you want to run the training
     test_pred <- model %>% predict(test_images)
     cor.coef <- cor.test(test_pred, test_labels)$estimate
     
-    pdf(paste(colnames(temp.test)[i],".pdf",sep=""))
+    pdf(paste(colnames(temp.test)[i],"_IBD.pdf",sep=""))
     plot(test_pred ~ test_labels, xlab = "true", ylab="estimated", main = colnames(temp.test)[i])
     lines(c(0:1000000),(0:1000000), col=2)
     dev.off()
@@ -285,7 +285,7 @@ epochs <- 10 ## how long do you want to run the training
     test_pred <- model %>% predict(test_images)
     cor.coef <- cor.test(test_pred, test_labels)$estimate
     
-    pdf(paste(colnames(temp.test)[i],".pdf",sep=""))
+    pdf(paste(colnames(temp.test)[i],"_Island.pdf",sep=""))
     plot(test_pred ~ test_labels, xlab = "true", ylab="estimated", main = colnames(temp.test)[i])
     lines(c(0:1000000),(0:1000000), col=2)
     dev.off()
